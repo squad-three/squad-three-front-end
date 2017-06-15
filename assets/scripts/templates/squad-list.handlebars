@@ -1,0 +1,23 @@
+
+<!-- Template copied from AutoMom project
+We can adapt as we decide what our divs and resources are -->
+
+{{#each chores as |chore|}}
+
+<div class="container">
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+    <div class="thumbnail">
+      <div class="caption">
+<div id='chore-listing' data-id="{{chore.id}}">
+  <!-- <p>Chore ID: {{chore.id}}</p> -->
+  <h3>{{chore.chore_name}}</h3>
+  <p>Chore ID: {{chore.id}}</p>
+  <p>Directions: {{chore.directions}}</p>
+  <p>Day of Week: {{chore.day_of_week}}</p>
+</div>
+</div>
+</div>
+</div>
+
+{{/each}}
