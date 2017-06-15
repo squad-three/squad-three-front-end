@@ -1,0 +1,33 @@
+// Classes are for styling.
+// IDs are for UX behavior.
+
+body {
+  background-color: $gray;
+  font-size: $font-size;
+}
+
+.announcement {
+  color: $red;
+  margin-top: $font-size;
+}
+
+.app-title {
+  background-color: $gray;
+  font-size: $font-size-title;
+  text-align: center;
+}
+
+.authn {
+  display: inline;
+  margin-top: $font-size;
+}
+
+.container-fluid {
+  display: inline;
+  max-width: 860px;
+  min-width: 640px;
+}
+
+.matrix .response .row {
+  margin-top: $font-size;
+}
