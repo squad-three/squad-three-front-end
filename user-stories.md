@@ -1,4 +1,4 @@
-# User Stories
+# User Stories for Bucket List Team Project
 
 ## Auth functions
 
