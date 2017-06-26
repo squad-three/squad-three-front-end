@@ -15,8 +15,6 @@ const failure = function (response) {
 
 // Clicked the Log-in button
 const onRequest = function () {
-  // Clear matrix search results, as they may show ownership database
-  announceUI.clear('response')
   // Remove the log-out & change-settings buttons
   announceUI.clear('authn')
   // Tell user he is being logged out.

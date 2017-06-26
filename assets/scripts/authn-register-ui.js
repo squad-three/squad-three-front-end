@@ -8,13 +8,12 @@ const getFormFields = require('../../lib/get-form-fields')
 const msg = require('./messages.js')
 const registerForm = require('../templates/registerForm.handlebars')
 const store = require('./store')
+
 // Extracts fields buried inside the registration form object
 const extractFormFields = function (APIObject, user) {
   user.email = APIObject.credentials.email
   user.password = APIObject.credentials.password
   user.passwordConfirmation = APIObject.credentials.password_confirmation
-  user.name = APIObject.credentials.name
-  user.organization = APIObject.credentials.organization
 }
 
 const failure = function (response) {

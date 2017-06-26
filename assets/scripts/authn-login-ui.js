@@ -30,9 +30,7 @@ const success = function (response) {
     response.user.email,
     null,
     response.user.id,
-    response.user.token,
-    response.user.name,
-    response.user.organization)
+    response.user.token)
   announceUI.clear('announcement') // Clears announcement area.
   authnUtilities.postLoggedInUserWorkingView()
 }
