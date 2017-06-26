@@ -32,7 +32,7 @@ const success = function (response) {
     response.user.id,
     response.user.token)
   announceUI.clear('announcement') // Clears announcement area.
-  authnUtilities.postLoggedInUserWorkingView()
+  authnUtilities.postTable()
 }
 
 // Clicked the Log-in button

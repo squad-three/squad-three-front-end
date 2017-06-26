@@ -1,5 +1,4 @@
 'use strict'
-const store = require('./store')
 
 // messages in English for now
 const alreadyRegistered = 'This email address is already registered. Attempting to log you in…'
