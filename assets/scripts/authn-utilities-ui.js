@@ -4,7 +4,7 @@ const announceUI = require('./announce-ui')
 const loggedInForm = require('../templates/loggedInForm.handlebars')
 const msg = require('./messages.js')
 
-// Display logged-in condition & matrix request form
+// Display logged-in condition & working space
 const postTable = function () {
   announceUI.clear('announcement')
   $('#authn').html(loggedInForm) // Load authn area.
