@@ -1,7 +1,7 @@
 'use strict'
 
 // Define User constructor
-const User = function (isLoggedIn, email, password, id, authNToken,) {
+const User = function (isLoggedIn, email, password, id, authNToken) {
   this.setLogInStatus(isLoggedIn, email, password, id, authNToken)
 }
 
