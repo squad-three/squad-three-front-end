@@ -30,7 +30,6 @@ const onClick = function (e) {
       authnSettingsUI.onPasswordSubmit(e)
       break
     case 'change-settings-cancel':
-      announceUI.clear('announcement') // Clears announcement area.
       authnUtilitiesUI.postTable()
       break
     case 'change-settings-request':

@@ -18,7 +18,7 @@ const extractFormFields = function (APIObject, user) {
 const failure = function (response) {
   announceUI.post(msg.passwordChangeFailed, 'announcement')
   // Pause for 3 seconds to let user see message, then post working view
-  setTimeout(authnUtilities.postLoggedInUserWorkingView, 2500)
+  setTimeout(authnUtilities.postTable(), 2500)
 }
 
 // Clicked the Settings icon
@@ -56,7 +56,7 @@ const onPasswordSubmit = function (e) {
 const success = function (response) {
   announceUI.post(msg.passwordChanged, 'announcement')
   // Pause for 3 seconds to let user see message, then post working view
-  setTimeout(authnUtilities.postLoggedInUserWorkingView, 2500)
+  setTimeout(authnUtilities.postTable(), 2500)
 }
 
 // Returns false if:
