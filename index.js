@@ -8,4 +8,4 @@
 require('./assets/scripts/index.js')
 
 // styles
-require('./assets/styles/index.scss')
+require('./sass/index.scss')
