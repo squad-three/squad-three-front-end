@@ -1,6 +1,6 @@
 'use strict'
 // Dispatcher for events in the authn authentication section of the DOM.
-
+const announceUI = require('./announce-ui')
 const authnLoginUI = require('./authn-login-ui')
 const authnLogoutUI = require('./authn-logout-ui')
 const authnRegisterUI = require('./authn-register-ui')
@@ -23,13 +23,15 @@ const onClick = function (e) {
   e.preventDefault()
   switch (e.target.id) {
     case 'cancel-request':
+      announceUI.clear('announcement') // Clears announcement area.
       $('#authn').html(logInRegisterButtons())
       break
     case 'change-password-submit':
       authnSettingsUI.onPasswordSubmit(e)
       break
     case 'change-settings-cancel':
-      authnUtilitiesUI.postLoggedInUserWorkingView()
+      announceUI.clear('announcement') // Clears announcement area.
+      authnUtilitiesUI.postTable()
       break
     case 'change-settings-request':
       authnSettingsUI.onRequest()
