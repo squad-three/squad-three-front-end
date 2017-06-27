@@ -24,36 +24,37 @@ $(() => {
   // other UI inits go here
 
   const editor = new $.fn.dataTable.Editor({
-    table: '#example',
+    table: '#main-table',
     fields: [{
-      label: "Name:",
-      name: "name"
+      label: "Description:",
+      name: "Description"
     }, {
-      label: "Position:",
-      name: "position"
+      label: "Category:",
+      name: "category"
     }, {
-      label: "Office:",
-      name: "office"
+      label: "Location:",
+      name: "location"
     }, {
-      label: "Age:",
-      name: "age"
+      label: "Duration:",
+      name: "duration"
     }, {
-      label: "Date:",
+      label: "Cost:",
       name: "date",
       type: "datetime"
     }, {
-    type:  "select",
-    label: "Status:",
-    name:  "salary",
-    options: [
-        { label: "Done", value: "Done" },
-        { label: "In Progress",    value: "In Progress" }
+      type:  "select",
+      label: "Status:",
+      name:  "status",
+      options: [
+        { label: "Some Day", value: "Some Day" },
+        { label: "In Progress", value: "In Progress" },
+        { label: "Done", value: "Done" }
     ]
 }
   ]
   })
 
-  $('#example').DataTable({
+  $('#main-table').DataTable({
     select: true,
     dom: 'Bfrtip',
     buttons: [{
@@ -70,22 +71,22 @@ $(() => {
       }
     ],
     columns: [{
-        data: "name"
+        data: "description"
       },
       {
-        data: "position"
+        data: "category"
       },
       {
-        data: "office"
+        data: "location"
       },
       {
-        data: "age"
+        data: "duration"
       },
       {
-        data: "date"
+        data: "cost"
       },
       {
-        data: "salary"
+        data: "status"
       }
     ]
   })
