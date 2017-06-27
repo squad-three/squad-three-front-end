@@ -28,7 +28,7 @@ const success = function (response) {
   // Log out the user locally.
   store.user.setLogInStatus(false)
   // Clear old announcements
-  announceUI.clear('announcement')
+  announceUI.clear('all')
   // Display log-in/register buttons.
   $('#authn').html(logInRegisterButtons())
 }

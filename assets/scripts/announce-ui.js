@@ -15,9 +15,8 @@ const clear = function (loc) {
   if (!arguments.length) loc = 'announcement'
   if (loc === 'all') {
     $('#announcement').html('')
-    // Other announcement areas can be inserted here
-    // $('#matrix-request').html('')
-    // $('#matrix-response').html('')
+    $('#authn').html('')
+    $('#bucket').html('')
     return
   }
   // Else erase specified area.

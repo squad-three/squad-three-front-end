@@ -1,6 +1,7 @@
 'use strict'
 // Short utility functions used by other authn-UI modules.
 const announceUI = require('./announce-ui')
+const blInit = require('./bl-init')
 const loggedInForm = require('../templates/loggedInForm.handlebars')
 const msg = require('./messages.js')
 
@@ -10,6 +11,7 @@ const postTable = function () {
   $('#authn').html(loggedInForm) // Load authn area.
   announceUI.post(msg.userInfo, 'logged-in-user') // Add user name
   // load bucket list table starts here
+  blInit.blInit()
 }
 
 // Examines proposed password & passwordConfirmation in store.user
