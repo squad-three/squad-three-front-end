@@ -3,7 +3,7 @@
 
 const announceUI = require('./announce-ui')
 const authnAPI = require('./authn-api')
-const authnUtilities = require('./authn-utilities-ui')
+const authnUtilitiesUI = require('./authn-utilities-ui')
 const getFormFields = require('../../lib/get-form-fields')
 const msg = require('./messages.js')
 const loginForm = require('../templates/loginForm.handlebars')
@@ -32,7 +32,7 @@ const success = function (response) {
     response.user.id,
     response.user.token)
   announceUI.clear('announcement') // Clears announcement area.
-  authnUtilities.postTable()
+  authnUtilitiesUI.postTable()
 }
 
 // Clicked the Log-in button
