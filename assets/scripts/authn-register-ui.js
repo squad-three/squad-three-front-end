@@ -17,7 +17,8 @@ const extractFormFields = function (APIObject, user) {
 }
 
 const failure = function (response) {
-  if (response.responseText.includes('has already been taken')) {
+  if (response.responseText.includes('has already been taken') ||
+      response.responseText.includes('expected `email` to be unique')) {
     // Presence of email object indicates duplicate email registration
     announceUI.post(msg.alreadyRegistered, 'announcement')
     // Try logging in after a pause
