@@ -5,6 +5,7 @@
 
 // load manifests
 // scripts
+
 require('./assets/scripts/index.js')
 
 // styles
