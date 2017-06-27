@@ -3,6 +3,8 @@
 const webpack = require('webpack')
 const path = require('path')
 
+const configDir = __dirname
+
 module.exports = {
   options: {
     entry: {
@@ -71,7 +73,10 @@ module.exports = {
 
     resolve: {
       alias: {
-        handlebars: 'handlebars/dist/handlebars.js'
+        handlebars: 'handlebars/dist/handlebars.js',
+        'datatables.net': 'datatables',
+        'datatables.net-editor': path.resolve(configDir, './lib/Editor-1.6.3/js/datatables.editor.js'),
+        'datatables.net-editor-bs': path.resolve(configDir, './lib/Editor-1.6.3/js/editor.bootstrap.js')
       }
     },
     stats: {

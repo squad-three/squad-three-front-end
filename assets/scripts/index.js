@@ -6,6 +6,10 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const store = require('./store')
 const User = require('./user')
 
+// require('datatables.net')
+require('datatables.net-bs')
+// require('datatables.net-editor')
+
 $(() => {
   setAPIOrigin(location, config)
   // Instantiate a new User in store.
@@ -16,4 +20,5 @@ $(() => {
   // Load initial page content: matrix form & login/register buttons
   authnDispatchUI.initUI()
   // other UI inits go here
+  $('#example').DataTable()
 })
