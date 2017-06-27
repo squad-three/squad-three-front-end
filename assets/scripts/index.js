@@ -6,10 +6,11 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const store = require('./store')
 const User = require('./user')
 
-const $ = require('jquery')
 require('datatables.net-bs')
+require('datatables.net-buttons')
+require('datatables.net-select')
 
-// require('./dataTables.editor.js')(window, $)
+require('./dataTables.editor.js')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -22,40 +23,17 @@ $(() => {
   authnDispatchUI.initUI()
   // other UI inits go here
 
-  // const editor = new $.fn.dataTable.Editor({
-  //   ajax:  '/api/staff',
-  //   table: '#example',
-  //   fields: [
-  //       { label: 'First name', name: 'first_name' },
-  //       { label: 'Last name',  name: 'last_name'  },
-  //       // etc
-  //   ]
-  // } );
+  const editor = new $.fn.dataTable.Editor({
+    table: '#example'
+  } )
 
-  $('#example').DataTable()
-//     ajax: '/api/staff',
-//     dom: 'Bfrtip',
-//     columns: [
-//         { data: 'first_name' },
-//         { data: 'last_name' },
-//         // etc
-//     ],
-//     select: true,
-//     buttons: [
-//         { extend: 'create', editor: editor },
-//         { extend: 'edit',   editor: editor },
-//         { extend: 'remove', editor: editor }
-//     ]
-// } );
-// })
-
-// const editor = new $.fn.dataTable.Editor({
-//   ajax:  '/api/staff',
-//   table: '#example',
-//   fields: [
-//       { label: 'First name', name: 'first_name' },
-//       { label: 'Last name',  name: 'last_name'  },
-//       // etc
-//   ]
-// } );
+  $('#example').DataTable({
+    select: true,
+    dom: 'Bfrtip',
+    buttons: [
+        { extend: 'create', editor: editor },
+        { extend: 'edit',   editor: editor },
+        { extend: 'remove', editor: editor }
+    ]
+} )
 })
