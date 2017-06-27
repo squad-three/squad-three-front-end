@@ -25,44 +25,68 @@ $(() => {
 
   const editor = new $.fn.dataTable.Editor({
     table: '#example',
-    fields: [ {
-                label: "Name:",
-                name: "name"
-            }, {
-                label: "Position:",
-                name: "position"
-            }, {
-                label: "Office:",
-                name: "office"
-            }, {
-                label: "Age:",
-                name: "age"
-            }, {
-                label: "Date:",
-                name: "date",
-                type: "datetime"
-            }, {
-                label: "Salary:",
-                name: "salary"
-            }
-        ]
-  } )
+    fields: [{
+      label: "Name:",
+      name: "name"
+    }, {
+      label: "Position:",
+      name: "position"
+    }, {
+      label: "Office:",
+      name: "office"
+    }, {
+      label: "Age:",
+      name: "age"
+    }, {
+      label: "Date:",
+      name: "date",
+      type: "datetime"
+    }, {
+    type:  "select",
+    label: "Status:",
+    name:  "salary",
+    options: [
+        { label: "Done", value: "Done" },
+        { label: "In Progress",    value: "In Progress" }
+    ]
+}
+  ]
+  })
 
   $('#example').DataTable({
     select: true,
     dom: 'Bfrtip',
-    buttons: [
-        { extend: 'create', editor: editor },
-        { extend: 'edit',   editor: editor },
-        { extend: 'remove', editor: editor }
+    buttons: [{
+        extend: 'create',
+        editor: editor
+      },
+      {
+        extend: 'edit',
+        editor: editor
+      },
+      {
+        extend: 'remove',
+        editor: editor
+      }
     ],
-    columns: [
-            { data: "name" },
-            { data: "position" },
-            { data: "office" },
-            { data: "age" },
-            { data: "date" },
-            { data: "salary", render: $.fn.dataTable.render.number( ',', '.', 0, '$' ) }
-          ]
-} )
+    columns: [{
+        data: "name"
+      },
+      {
+        data: "position"
+      },
+      {
+        data: "office"
+      },
+      {
+        data: "age"
+      },
+      {
+        data: "date"
+      },
+      {
+        data: "salary"
+      }
+    ]
+  })
 })
