@@ -23,7 +23,7 @@ const onClick = function (e) {
   e.preventDefault()
   switch (e.target.id) {
     case 'cancel-request':
-      authnUtilitiesUI.postPublicUserWorkingView()
+      $('#authn').html(logInRegisterButtons())
       break
     case 'change-password-submit':
       authnSettingsUI.onPasswordSubmit(e)
