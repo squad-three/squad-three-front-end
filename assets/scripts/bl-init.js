@@ -12,11 +12,11 @@ const blInit = function () {
   const editor = new $.fn.dataTable.Editor({
     table: '#main-table',
     fields: [
-      {label: 'Description:', name: 'Description'},
+      {label: 'Description:', name: 'description'},
       {label: 'Category:', name: 'category'},
       {label: 'Location:', name: 'location'},
       {label: 'Duration:', name: 'duration'},
-      {label: 'Cost:', name: 'date', type: 'datetime'},
+      {label: 'Cost:', name: 'cost'},
       {type: 'select',
         label: 'Status:',
         name: 'status',
