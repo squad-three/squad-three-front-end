@@ -3,7 +3,7 @@
 const announceUI = require('./announce-ui.js')
 const authnAPI = require('./authn-api')
 const authnLogin = require('./authn-login-ui')
-const authnUtilities = require('./authn-utilities-ui')
+const authnUtilitiesUI = require('./authn-utilities-ui')
 const getFormFields = require('../../lib/get-form-fields')
 const msg = require('./messages.js')
 const registerForm = require('../templates/registerForm.handlebars')
@@ -76,7 +76,7 @@ const validateCredentials = function (user) {
     isEmailPresent = false
   }
   // True if password fields present+identical
-  const isValid = authnUtilities.validateProposedPassword(user)
+  const isValid = authnUtilitiesUI.validateProposedPassword(user)
   return isEmailPresent && isValid
 }
 

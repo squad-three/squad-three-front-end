@@ -2,7 +2,7 @@
 // UX for settings changes.
 const announceUI = require('./announce-ui.js')
 const authnAPI = require('./authn-api')
-const authnUtilities = require('./authn-utilities-ui')
+const authnUtilitiesUI = require('./authn-utilities-ui')
 const getFormFields = require('../../lib/get-form-fields')
 const msg = require('./messages.js')
 const changeSettings = require('../templates/changeSettings.handlebars')
@@ -18,7 +18,7 @@ const extractFormFields = function (APIObject, user) {
 const failure = function (response) {
   announceUI.post(msg.passwordChangeFailed, 'announcement')
   // Pause for 3 seconds to let user see message, then post working view
-  setTimeout(authnUtilities.postLoggedInUserWorkingView, 2500)
+  setTimeout(authnUtilitiesUI.postTable(), 2500)
 }
 
 // Clicked the Settings icon
@@ -56,7 +56,7 @@ const onPasswordSubmit = function (e) {
 const success = function (response) {
   announceUI.post(msg.passwordChanged, 'announcement')
   // Pause for 3 seconds to let user see message, then post working view
-  setTimeout(authnUtilities.postLoggedInUserWorkingView, 2500)
+  setTimeout(authnUtilitiesUI.postTable(), 2500)
 }
 
 // Returns false if:
@@ -71,7 +71,7 @@ const validateCredentials = function (user) {
     isOldPasswordPresent = false
   }
   // True if password fields present+identical
-  const isValid = authnUtilities.validateProposedPassword(user)
+  const isValid = authnUtilitiesUI.validateProposedPassword(user)
   return isOldPasswordPresent && isValid
 }
 
