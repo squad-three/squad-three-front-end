@@ -3,7 +3,7 @@
 const config = {
   apiOrigins: {
     development: 'http://localhost:4741',
-    production: 'https://enigmatic-beyond-36967.herokuapp.com/'
+    production: 'https://enigmatic-beyond-36967.herokuapp.com'
   }
 }
 
