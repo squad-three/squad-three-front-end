@@ -17,7 +17,8 @@ const loginAPICall = function (credentials) {
 
 const failure = function (response) {
   // if statusText = 'Unauthorized', inform user of bad email/password.
-  if (response.statusText.includes('Unauthorized')) {
+  if (response.statusText.includes('Unauthorized') ||
+      response.statusText.includes('Not Found')) {
     announceUI.post(msg.badEmailPassword, 'announcement')
   } else {
     announceUI.post(msg.loginFailUnknownCause, 'announcement')
