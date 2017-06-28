@@ -298,7 +298,8 @@ table.dataTable td {
   float: right;
   text-align: right;
   padding-top: 0.25em;
-  background: rgba(191, 63, 63, 0.4);
+  /*below I was testing whether styles got applied to dataTables in DOM*/
+  /*background: rgba(191, 63, 63, 0.4);*/
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button {
   box-sizing: border-box;
