@@ -18,3 +18,15 @@ accessed via a relative path in the index.html file. */
   border: 1px solid transparent;
   border-radius: 2px;
 }
+
+.DTE_Form_Content{
+  background: CornflowerBlue;
+}
+
+.DTE_Footer{
+  background: red;
+}
+
+.DTE_Form_Buttons{
+
+}
