@@ -33,13 +33,15 @@ from dataTables.jqueryui.class*/
 
 
 .DTE_Form_Content{
-  background: CornflowerBlue;
+  /*Can uncomment color for debugging purposes*/
+  /*background: CornflowerBlue;*/
 }
 
 /*DTE_Footer contains .btn, which styles our create/edit button. */
 
 .DTE_Footer{
-  background: red;
+  /*can uncomment color for debugging purposes*/
+  /*background: red;*/
   padding: 100px;
   float: right;
 }
