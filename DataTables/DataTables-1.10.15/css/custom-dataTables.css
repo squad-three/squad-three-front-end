@@ -4,6 +4,8 @@ index.html. This custom css stylesheet overrides some of those
 styles that come with DataTables with ones stored in this file and
 accessed via a relative path in the index.html file. */
 
+
+
 .dataTables_wrapper .dataTables_paginate .paginate_button {
   box-sizing: border-box;
   display: inline-block;
@@ -19,12 +21,22 @@ accessed via a relative path in the index.html file. */
   border-radius: 2px;
 }
 
+.DTE_Body{
+  clear:left;
+}
+
+
 .DTE_Form_Content{
   background: CornflowerBlue;
 }
 
+.btn{
+  float:right;
+}
+
 .DTE_Footer{
   background: red;
+  clear: both;
 }
 
 .DTE_Form_Buttons{
