@@ -1,8 +1,14 @@
-/*Custom styles that override DataTables css.
+/*
+Custom styles that override DataTables css.
 Most of our css files are stored on a CDN and accessed via a link tag in
 index.html. This custom css stylesheet overrides some of those
 styles that come with DataTables with ones stored in this file and
-accessed via a relative path in the index.html file. */
+accessed via a relative path in the index.html file.
+*/
+
+
+/*fixes problem with excess padding around pagination controls; overrides style
+from dataTables.jqueryui.class*/
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
   box-sizing: border-box;
@@ -18,3 +24,33 @@ accessed via a relative path in the index.html file. */
   border: 1px solid transparent;
   border-radius: 2px;
 }
+
+/*DTE_Body contains DTE_Form_Content, which contains our form. */
+
+.DTE_Body{
+  float:left;
+}
+
+
+.DTE_Form_Content{
+  /*Can uncomment color for debugging purposes*/
+  /*background: CornflowerBlue;*/
+}
+
+/*DTE_Footer contains .btn, which styles our create/edit button. */
+
+.DTE_Footer{
+  /*can uncomment color for debugging purposes*/
+  /*background: red;*/
+  padding: 100px;
+  float: right;
+}
+
+.btn{
+/*May use later*/
+}
+
+
+/*.DTE_Form_Buttons{
+May use later
+}*/
