@@ -98,7 +98,7 @@ planning documents and documentation:
 ## Links to Front And Back End Repositories
 
 [A link to the front end repository](https://github.com/squad-three/squad-three-front-end)
-[A link to the back end repository] (https://github.com/squad-three/squad-three-back-end)
+[A link to the back end repository](https://github.com/squad-three/squad-three-back-end)
 
 ## Team
 
