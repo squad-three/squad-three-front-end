@@ -59,7 +59,7 @@ const editorConfigurationParameters = function () {
       },
       {label: 'Location:', name: 'location'},
       {label: 'Duration:', name: 'duration'},
-      {label: 'Cost:', name: 'cost'},
+      {label: 'Cost:', name: 'cost', attr: {type: 'number'}},
       {type: 'select',
         label: 'Status:',
         name: 'status',
@@ -90,7 +90,7 @@ const mainTableParameters = function (editor) {
       {data: 'category'},
       {data: 'location'},
       {data: 'duration'},
-      {data: 'cost'},
+      {data: 'cost', render: $.fn.dataTable.render.number(',', '.', 0, '$')},
       {data: 'status'}
     ]
   }
