@@ -23,7 +23,7 @@ const editorConfigurationParameters = function () {
       },
       edit: {
         type: 'PUT',
-        url: config.apiOrigin + '/bucket',
+        url: config.apiOrigin + '/bucket/_id_',
         dataSrc: 'data',
         headers: {'Authorization': 'Token token=' + store.user.authNToken}
       },
