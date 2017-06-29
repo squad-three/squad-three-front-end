@@ -78,7 +78,7 @@ const mainTableParameters = function (editor) {
       url: config.apiOrigin + '/bucket',
       headers: {'Authorization': 'Token token=' + store.user.authNToken}
     },
-    select: true,
+    select: 'single',
     dom: 'Bfrtip',
     buttons: [
       {extend: 'create', editor: editor},
