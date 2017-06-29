@@ -59,7 +59,7 @@ const editorConfigurationParameters = function () {
       },
       {label: 'Location:', name: 'location'},
       {label: 'Duration:', name: 'duration'},
-      {label: 'Cost:', name: 'cost'},
+      {label: 'Cost:', name: 'cost', attr: {type: 'number'}},
       {type: 'select',
         label: 'Status:',
         name: 'status',
