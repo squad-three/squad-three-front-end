@@ -90,7 +90,7 @@ const mainTableParameters = function (editor) {
       {data: 'category'},
       {data: 'location'},
       {data: 'duration'},
-      {data: 'cost'},
+      {data: 'cost', render: $.fn.dataTable.render.number(',', '.', 0, '$')},
       {data: 'status'}
     ]
   }
