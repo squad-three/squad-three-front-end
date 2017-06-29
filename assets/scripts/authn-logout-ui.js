@@ -32,6 +32,8 @@ const success = function (response) {
   // Display log-in/register buttons.
   $('#authn').html(logInRegisterButtons())
   $('.DTE_Body').addClass('hidden')
+  $('.DTE_Header_Content').addClass('hidden')
+  $('.btn').addClass('hidden')
 }
 
 module.exports = {
