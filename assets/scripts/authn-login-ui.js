@@ -43,6 +43,7 @@ const onRequest = function () {
   $('#authn').html(loginForm)
   // Hide the log-in button but keep the space reserved on the screen
   $('#log-in-request').css('visibility', 'hidden')
+  $('.DTE_Body').removeClass('hidden')
 }
 
 // Clicked log-in form submit button

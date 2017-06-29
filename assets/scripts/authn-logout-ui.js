@@ -31,6 +31,7 @@ const success = function (response) {
   announceUI.clear('all')
   // Display log-in/register buttons.
   $('#authn').html(logInRegisterButtons())
+  $('.DTE_Body').addClass('hidden')
 }
 
 module.exports = {

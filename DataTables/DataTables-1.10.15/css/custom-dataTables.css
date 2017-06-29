@@ -50,6 +50,11 @@ from dataTables.jqueryui.class*/
 /*May use later*/
 }
 
+/*Allows us to use addClass() and removeClass() jquery methods on add/edit form*/
+
+.hidden {
+  display: none;
+}
 
 /*.DTE_Form_Buttons{
 May use later
