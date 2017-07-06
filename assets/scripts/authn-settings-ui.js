@@ -23,7 +23,7 @@ const failure = function (response) {
 
 // Clicked the Settings icon
 const onRequest = function () {
-  // Clear announcement, response & matrix areas.
+  // Clear announcement, authentication; delete table & editor
   announceUI.clear('all')
   // Remove any editor window
   store.editor.close()
@@ -34,8 +34,14 @@ const onRequest = function () {
   $('#change-settings-request').css('visibility', 'hidden')
 }
 
+// Password change operation cancelled by user
+const onCancel = function () {
+  // User is logged in
+  authnUtilitiesUI.postTable()
+}
+
 // Submit the password change request
-const onPasswordSubmit = function (e) {
+const onSubmit = function (e) {
   e.preventDefault()
   // Clear old error messages, if any.
   announceUI.clear('announcement')
@@ -53,6 +59,7 @@ const onPasswordSubmit = function (e) {
       .then(success)
       .catch(failure)
   }
+  // Otherwise wait for user to respond to the message posted by validateCredentials
 }
 
 const success = function (response) {
@@ -78,6 +85,7 @@ const validateCredentials = function (user) {
 }
 
 module.exports = {
+  onCancel,
   onRequest,
-  onPasswordSubmit
+  onSubmit
 }

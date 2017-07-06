@@ -31,11 +31,6 @@ const success = function (response) {
   announceUI.clear('all')
   // Display log-in/register buttons.
   $('#authn').html(logInRegisterButtons())
-  store.editor.close()
-  // $('.DTE_Body').remove()
-  // $('.DTE_Header_Content').remove()
-  // $('.btn').remove()
-  $('#bucket').empty()
 }
 
 module.exports = {
