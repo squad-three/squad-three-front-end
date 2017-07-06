@@ -23,6 +23,7 @@ const onClick = function (e) {
   e.preventDefault()
   switch (e.target.id) {
     case 'cancel-request':
+      // Cancel the log-in or register request
       announceUI.clear('announcement') // Clears announcement area.
       $('#authn').html(logInRegisterButtons())
       break
@@ -30,7 +31,7 @@ const onClick = function (e) {
       authnSettingsUI.onSubmit(e)
       break
     case 'change-settings-cancel':
-      authnUtilitiesUI.postTable()
+      authnSettingsUI.onCancel()
       break
     case 'change-settings-request':
       authnSettingsUI.onRequest()
