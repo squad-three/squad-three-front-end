@@ -27,7 +27,7 @@ const onClick = function (e) {
       $('#authn').html(logInRegisterButtons())
       break
     case 'change-password-submit':
-      authnSettingsUI.onPasswordSubmit(e)
+      authnSettingsUI.onSubmit(e)
       break
     case 'change-settings-cancel':
       authnUtilitiesUI.postTable()

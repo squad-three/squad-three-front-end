@@ -34,7 +34,7 @@ const onRequest = function () {
 }
 
 // Submit the password change request
-const onPasswordSubmit = function (e) {
+const onSubmit = function (e) {
   e.preventDefault()
   // Clear old error messages, if any.
   announceUI.clear('announcement')
@@ -78,5 +78,5 @@ const validateCredentials = function (user) {
 
 module.exports = {
   onRequest,
-  onPasswordSubmit
+  onSubmit
 }
