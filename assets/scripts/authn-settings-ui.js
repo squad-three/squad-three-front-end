@@ -25,6 +25,7 @@ const failure = function (response) {
 const onRequest = function () {
   // Clear announcement, response & matrix areas.
   announceUI.clear('all')
+  store.editor.close()
   // Display settings change form
   $('#authn').html(changeSettings)
   announceUI.post(msg.userInfo, 'logged-in-user')

@@ -38,8 +38,8 @@ const success = function (response) {
 
 // Clicked the Log-in button
 const onRequest = function () {
-  // Clear announcement, response & matrix areas.
-  announceUI.clear('all')
+  // Clear announcement. Since not logged in, bucket area should be empty.
+  announceUI.clear('announcement')
   $('#authn').html(loginForm)
   // Hide the log-in button but keep the space reserved on the screen
   $('#log-in-request').css('visibility', 'hidden')
