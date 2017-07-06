@@ -79,7 +79,7 @@ const mainTableParameters = function (editor) {
       headers: {'Authorization': 'Token token=' + store.user.authNToken}
     },
     select: 'single',
-    dom: 'Bfrtip',
+    dom: 'Blfrtip',
     buttons: [
       {extend: 'create', editor: editor},
       {extend: 'edit', editor: editor},
