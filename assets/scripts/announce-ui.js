@@ -42,7 +42,7 @@ const clearTableAndEditor = function () {
   // Delete the DataTable instance entirely and remove it from the DOM
   store.table.destroy({'remove': true})
   // Empty that section of the DOM to be sure
-  $('#authn').html('')
+  $('#bucket').empty()
 }
 
 const post = function (msg, loc) {

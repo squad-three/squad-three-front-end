@@ -5,7 +5,6 @@ const authnLoginUI = require('./authn-login-ui')
 const authnLogoutUI = require('./authn-logout-ui')
 const authnRegisterUI = require('./authn-register-ui')
 const authnSettingsUI = require('./authn-settings-ui')
-const authnUtilitiesUI = require('./authn-utilities-ui')
 const logInRegisterButtons = require('../templates/logInRegisterButtons.handlebars')
 // const matrixGetUI = require('./matrix-get-ui')
 
