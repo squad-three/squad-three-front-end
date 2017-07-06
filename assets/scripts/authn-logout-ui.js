@@ -16,7 +16,7 @@ const failure = function (response) {
 // Clicked the Log-in button
 const onRequest = function () {
   // Remove the log-out & change-settings buttons
-  announceUI.clear('authn')
+  announceUI.clear('all')
   // Tell user he is being logged out.
   announceUI.post(msg.loggingOut, 'announcement')
   authnAPI.logOut()
