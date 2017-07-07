@@ -37,10 +37,11 @@ const clear = function (loc) {
 
 // Delete table, editor, and empty DOM section
 const clearTableAndEditor = function () {
-  // Close the DataTables editor
-  store.editor.close()
-  // Delete the DataTable instance entirely and remove it from the DOM
-  store.table.destroy({'remove': true})
+  // Close the DataTables editor, if it exists
+  if (store.editor) store.editor.close()
+  // Delete the DataTable instance entirely (if it exists)
+  //  and remove it from the DOM
+  if (store.table) store.table.destroy({'remove': true})
   // Empty that section of the DOM to be sure
   $('#bucket').empty()
 }
