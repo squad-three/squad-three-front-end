@@ -24,13 +24,22 @@ const blInit = function () {
 
   editor.on('preSubmit', function (e, o, action) {
     if (action !== 'remove') {
-      if (o.data[0].description === '') {
-        console.log('description not filled')
-        this.error('Description field is required.')
-        return false
-      } else if (o.data[0].description.length >= 28) {
-        this.error('description', 'Length must be less that 28 characters.')
-        return false
+      if (action === 'create') {
+        if (o.data[0].description === '') {
+          this.error('Description field is required.')
+          return false
+        } else if (o.data[0].description.length >= 28) {
+          this.error('description', 'Length must be less that 28 characters.')
+          return false
+        }
+      } else {
+        if (o.data[Object.keys(o.data)[0]].description === '') {
+          this.error('Description field is required.')
+          return false
+        } else if (o.data[Object.keys(o.data)[0]].description.length >= 28) {
+          this.error('description', 'Length must be less that 28 characters.')
+          return false
+        }
       }
     }
   })
