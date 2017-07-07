@@ -21,7 +21,12 @@ table.dataTable thead td {
 button.dt-button,
 div.dt-button,
 a.dt-button */
-#log-out-request {
+#log-out-request,
+#log-in-request,
+#register-request,
+#cancel-request,
+#register-submit,
+#log-in-submit  {
   /*
 commenting these out as the logout button is not part of a button group
   position: relative;
