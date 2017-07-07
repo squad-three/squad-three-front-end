@@ -26,7 +26,9 @@ a.dt-button */
 #register-request,
 #cancel-request,
 #register-submit,
-#log-in-submit  {
+#log-in-submit,
+#change-password-submit,
+#change-settings-cancel  {
   /*
 commenting these out as the logout button is not part of a button group
   position: relative;
